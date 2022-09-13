@@ -1,17 +1,21 @@
 #!/bin/bash
-x_len=0 
-Min_len=100 
-for username in $( cut –f1 -d : /etc/passwd )
-do 
-if [[ ${#username} -gt Max_len ]] 
+
+MAX_LEN=0
+MIN_LEN=100
+for USER_NAME in $(cut -f1 -d: /etc/passwd)
+do 
+if [[ ${#USER_NAME} -gt MAX_LEN ]]   
 then
-Max_len_username=${#username} 
-Max_len_username=$username 
-elif [[ ${#username} -lt Min_len ]] 
-then 
-Min_len=${#username} 
-Min_len_username=$username 
+MAX_LEN=${#USER_NAME}
+MAX_LEN_USERNAME=$USER_NAME   
+elif [[ ${#USER_NAME} -lt MIN_LEN ]]   
+then     
+MIN_LEN=${#USER_NAME}     
+MIN_LEN_USERNAME=$USER_NAME   
 fi
-done 
-echo “The longest user name is $Max_len_username”
-echo “The shortest user name is $Min_len_username”
+done
+
+echo “The longest user name is $MAX_LEN_USERNAME”
+echo “The shortest user name is $MIN_LEN_USERNAME”
+
+
