@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /home/vagrant/bashassignment/
-touch test1.txt
-mkdir filenew
+touch test100000.txt
+mkdir newfile100000
