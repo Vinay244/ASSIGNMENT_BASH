@@ -27,5 +27,11 @@ pipeline{
                 echo 'testing done'
             }
         }
+        stage('vinay'){
+              steps
+              {
+                    echo 'hiiii'
+              }
+        }
     }
 }
