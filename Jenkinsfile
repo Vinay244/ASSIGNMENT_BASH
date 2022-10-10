@@ -33,5 +33,13 @@ pipeline{
                     echo 'hiiii'
               }
         }
+        stage('intern'){
+              steps
+              {
+                  echo 'interns'  
+              }
+              
+        }
+                  
     }
 }
