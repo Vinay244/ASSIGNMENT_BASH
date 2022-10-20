@@ -38,8 +38,21 @@ pipeline{
               {
                   echo 'interns'  
               }
-              
+        
         }
+        stage('Slack Notificaton'){
+              steps
+              {
+                  slackSend baseUrl: 'https://hooks.slack.com/services/',
+                  channel: '#ci_updates', 
+                  color: 'good',
+                  message: 'Welcome to slack Integration..!',
+                  teamDomain: 'calsoftinccrew',
+                  tokenCredentialId: 'heloo'
+              }
+        }
+              
+        
                   
     }
 }
